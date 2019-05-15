@@ -33,17 +33,30 @@ ldconfig -v
 ## Run
 ```
 git clone https://github.com/qixuxiang/dlib_mnist
+
 cd dlib_mnist
+
 mkdir build && cd build
+
 cmake ..
+
 make -j4
+
 mkdir mnist_data && cd mnist_data
+
 wget -c http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+
 wget -c http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+
 wget -c http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+
 wget -c http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+
 gunzip *.gz 
+
 cd .. 
+
 ./dlib_mnist01 mnist_data
+
 ./dlib_mnist02 mnist_data
 ```
